@@ -41,6 +41,7 @@ async def start_telegram():
     os.makedirs('./downloads/', exist_ok=True)
     await client.start()
     print("Bot Telegram iniciado!")
+    await client.send_message('me', "Bot Telegram iniciado!")
     await client.run_until_disconnected()
 
 def run():
