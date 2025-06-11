@@ -18,7 +18,7 @@ keywords = ['a56', 'sabão', 'a36', '14s', 'poco x7']
 async def handler(event):
     message = event.message.message.lower()
     if any(keyword in message for keyword in keywords):
-        await client.send_message('me', f"🔔 Palavra-chave detectada: {message}")
+        await client.send_message('me', f"🔔 Palavra-chave detectada: {event.message.message}")
 
 def start_telegram():
     with client:
